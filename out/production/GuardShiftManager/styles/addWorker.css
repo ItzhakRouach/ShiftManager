@@ -1,0 +1,75 @@
+.root {
+    -fx-background-color: #e0f7fa;
+}
+
+.label {
+    -fx-font-size: 16px;
+    -fx-font-family: "Arial";
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-padding: 6 12;
+}
+
+.table-view {
+    -fx-border-color: #b2ebf2;
+    -fx-border-radius: 5px;
+}
+
+.searchBtn{
+    -fx-background-color:#19bdd8 ;
+    -fx-text-fill: white;
+     -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+.searchBtn:hover{
+    -fx-background-color: #13899c;
+      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.3, 2, 5);
+
+
+}
+
+.editBtn{
+    -fx-background-color:c6c8c8;
+    -fx-text-fill: white;
+     -fx-font-weight: bold;
+    -fx-padding:10px;
+}
+
+.editBtn:hover{
+    -fx-background-color: #989999;
+      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.3, 2, 5);
+}
+
+
+.addBtn{
+    -fx-background-color:#35c616 ;
+    -fx-text-fill: white;
+     -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+.addBtn:hover{
+    -fx-background-color: #299611;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.3, 2, 5);
+}
+
+
+
+.delBtn{
+    -fx-background-color: #f61717;
+    -fx-text-fill: white;
+     -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+
+.delBtn:hover{
+    -fx-background-color:#b70f0f;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.3, 2, 5);
+}

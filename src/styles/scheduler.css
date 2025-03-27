@@ -1,0 +1,27 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom, #f0f2f5, #d9e4ec);
+}
+
+.label {
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: #333;
+}
+
+.button {
+    -fx-font-size: 14px;
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-background-radius: 5px;
+    -fx-padding: 8 16;
+}
+
+.table-cell {
+    -fx-alignment: center;
+}
+
+.grid-pane {
+    -fx-background-color: white;
+    -fx-border-color: #90caf9;
+    -fx-border-radius: 8px;
+}

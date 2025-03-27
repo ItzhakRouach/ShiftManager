@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="GuardShiftManager:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/GuardShiftManager_jar</output-path>
+    <root id="archive" name="GuardShiftManager.jar">
+      <element id="module-output" name="GuardShiftManager" />
+      <element id="extracted-dir" path="$JavaFX24$/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$JavaFX24$/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$JavaFX24$/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$JavaFX24$/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$JavaFX24$/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$JavaFX24$/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$JavaFX24$/jdk.jsobject.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$JavaFX24$/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$JavaFX24$/javafx.graphics.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$JavaFX24$/jfx.incubator.input.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$JavaFX24$/jfx.incubator.richtext.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Downloads/gson-2.10.1.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,95 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom, #e3f2fd, #bbdefb);
+}
+
+.label-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+.button {
+    -fx-font-size: 16px;
+    -fx-background-radius: 10;
+    -fx-padding: 10 20 10 20;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 2, 0, 1, 1);
+}
+
+.button:hover {
+    -fx-background-color: #d0d0d0;
+}
+
+.button-green {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.button-blue {
+    -fx-background-color: #2196F3;
+    -fx-text-fill: white;
+}
+
+.button-red {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+}
+
+.button-purple {
+    -fx-background-color: #9C27B0;
+    -fx-text-fill: white;
+}
+
+.box-buttons {
+    -fx-spacing: 20;
+    -fx-alignment: center;
+    -fx-padding: 30;
+}
+
+.version-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #777;
+    -fx-padding: 10;
+}
+.addWorkerBtn{
+    -fx-background-color: #4ed90e;
+    -fx-font-size:18px;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+}
+
+.addWorkerBtn:hover{
+    -fx-background-color: #44bc0c;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.5), 10, 0.3, 2, 5);
+}
+
+.addRequestBtn{
+    -fx-background-color: #f6bc00;
+    -fx-font-size:18px;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+}
+
+.addRequestBtn:hover{
+    -fx-background-color:#dfaa00;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.5), 10, 0.3, 2, 5);
+}
+
+.createScheduleBtn{
+    -fx-background-color: #0fc8be;
+    -fx-font-size: 18px;
+    -fx-text-fill:white;
+    -fx-padding: 10px;
+}
+
+.createScheduleBtn:hover{
+    -fx-background-color: #11a49c;
+    -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.5), 10, 0.3, 2, 5);
+}
+
+.imageClass{
+    -fx-padding-top: 20px;
+}
+
+
+

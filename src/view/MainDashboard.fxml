@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns:fx = "http://javafx.com/fxml"
+            fx:controller="controller.MainDashboardController"
+            stylesheets="@../styles/dashboard.css">
+
+    <!--Top Header-->
+    <top>
+        <VBox spacing="20" alignment="CENTER" >
+            <padding>
+                <Insets top="80" right="5" bottom="5" left="5"/>
+            </padding>
+            <ImageView fitWidth="300" preserveRatio="true" style="-fx-padding-top:35px;">
+                <image >
+                    <Image url="@/resources/Logo.png"/>
+                </image>
+            </ImageView>
+
+            <Label text="Shift Manager" style="-fx-font-size: 52px; -fx-font-weight: 600; -fx-font-family: 'monospace'; fx-font-style: italic;"/>
+        </VBox>
+    </top>
+
+    <!---Center Content With Busttons -->
+    <center>
+        <HBox spacing="22" alignment="CENTER" nodeOrientation="RIGHT_TO_LEFT">
+            <padding>
+                    <Insets top="20" right="20" bottom="20" left="20"/>
+            </padding>
+            <Button text="הוסף עובד חדש"
+                    onAction="#handleAddWorker"
+                    styleClass="addWorkerBtn" />
+
+            <Button text="הוסף בקשות משמרות"
+                    onAction="#handleAddRequest"
+                    styleClass="addRequestBtn" />
+
+            <Button text="צור לוח משמרות שבועי"
+                    onAction="#handleGenerateSchedule"
+                    styleClass="createScheduleBtn" />
+        </HBox>
+    </center>
+
+    <!--- Footer -->
+    <bottom>
+            <HBox alignment="CENTER" >
+                <Label text="Ver 1.0" style="-fx-font-size: 12px; -fx-text-fill: gray; -fx-padding: 5px;"/>
+                <Label text="All Right Reserved © Itzhak Rouach 2025" style="-fx-font-size: 12px; -fx-text-fill: gray; -fx-font-weight:700"/>
+            </HBox>
+    </bottom>
+</BorderPane>
+
+

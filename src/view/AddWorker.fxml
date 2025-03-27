@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controller.AddWorkerController"
+      stylesheets="@../styles/addWorker.css"
+      spacing="20" nodeOrientation="RIGHT_TO_LEFT">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="הוסף עובד חדש" style = "-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Label text="שם:"  styleClass="lable"/>
+        <TextField fx:id="nameField" promptText="הכנס שם עובד" styleClass="lable"/>
+    </HBox>
+
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Label text="תפקיד: " styleClass="lable"/>
+        <ComboBox fx:id="roleComboBox" promptText="בחר תפקיד" styleClass="lable"/>
+        <CheckBox fx:id="shomerShabatCheckBox" text="שומר שבת" style="-fx-font-size:16px; -fx-font-weight: bold;"/>
+        <CheckBox fx:id="highPriorityCheckBox" text="עדיפות גבוה" style="-fx-font-size:16px; -fx-font-weight: bold;"/>
+    </HBox>
+
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Label text="מינימום משמרות:" styleClass="lable" />
+        <TextField fx:id="minShiftsField" promptText="למשל: 5" />
+        <Label text="מקסימום משמרות:"  styleClass="lable"/>
+        <TextField fx:id="maxShiftsField" promptText="למשל: 6" />
+    </HBox>
+
+
+    <HBox spacing="12" alignment="CENTER_LEFT">
+        <Button text="חפש לפי שם " onAction="#handleSearchWorker"
+                styleClass="searchBtn" />
+
+        <Button text="ערוך עובד" onAction="#handleEditWorker"
+                styleClass="editBtn"/>
+
+        <Button fx:id="addBtn"
+                text = "הוסף עובד "
+                onAction="#handleAddWorker"
+                styleClass="addBtn"/>
+        <Button text="מחק עובד  " onAction="#handleDeleteWorker"
+                styleClass="delBtn" />
+    </HBox>
+
+    <ScrollPane fitToWidth="true" fitToHeight="true">
+        <content>
+            <TableView fx:id="workerTable" prefHeight="350" prefWidth="600" styleClass="table-view">
+                <columns>
+                    <TableColumn fx:id="nameColumn" text="שם" prefWidth="115" />
+                    <TableColumn fx:id="roleColumn" text="תפקיד" prefWidth="120"/>
+                    <TableColumn fx:id="priorityColumn" text="עדיפות גבוהה" prefWidth="120"/>
+                    <TableColumn fx:id="shabatColumn" text="שומר שבת" prefWidth="120"/>
+                    <TableColumn fx:id="minColumn" text="מינימום משמרות" prefWidth="140"/>
+                    <TableColumn fx:id="maxColumn" text="מקסימום משמרות" prefWidth="150"/>
+                </columns>
+            </TableView>
+        </content>
+    </ScrollPane>
+</VBox>
+

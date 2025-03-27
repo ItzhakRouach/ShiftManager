@@ -1,0 +1,67 @@
+.root {
+    -fx-background-color: #fff8e1;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-font-family: "Arial";
+}
+
+.saveBtn{
+    -fx-background-color:#19bdd8 ;
+    -fx-text-fill: white;
+     -fx-font-weight: bold;
+    -fx-padding: 8px;
+}
+
+.saveBtn:hover{
+    -fx-background-color: #13899c;
+      -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.3, 2, 5);
+
+
+}
+
+.editBtn{
+    -fx-background-color:c6c8c8;
+    -fx-text-fill: white;
+     -fx-font-weight: bold;
+    -fx-padding:8px;
+}
+
+.editBtn:hover{
+    -fx-background-color: #989999;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5) , 6 , 0.3 , 0 , 2);
+}
+
+
+.addReqBtn{
+    -fx-background-color:#35c616 ;
+    -fx-text-fill: white;
+     -fx-font-weight: bold;
+    -fx-padding: 8px;
+}
+
+.addReqBtn:hover{
+    -fx-background-color: #299611;
+     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.3, 2, 5);
+}
+
+
+
+.delBtn{
+    -fx-background-color: #f61717;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px;
+}
+
+
+.delBtn:hover{
+    -fx-background-color:#b70f0f;
+     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.3, 2, 5);
+}
+
+.table-view {
+    -fx-border-color: #ffe082;
+    -fx-border-radius: 5px;
+}
