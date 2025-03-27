@@ -3,7 +3,7 @@ Security Shift Manager is a JavaFX-based desktop application designed to help se
 The app was designed for hebrew language.
 
 ## Features:
--Add and manage workers include:
+- Add and manage workers include:
   Role(shift manager , dispatcher , guard ).
   Min/Max shifts
   Priority level
@@ -42,9 +42,9 @@ The app was designed for hebrew language.
 load the code in inteliji or diffrente IDE for Java and run Main.app
 
 ## Technologies:
--Java 17+
--JavaFX 24
--Json
+- Java 17+
+- JavaFX 24
+- Json
 
 ## License
 MIT License - free to use and modify
