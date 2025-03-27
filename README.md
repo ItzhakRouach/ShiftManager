@@ -1,5 +1,6 @@
 # Security Shift Manager
 Security Shift Manager is a JavaFX-based desktop application designed to help security companies efficiently manage weekly shift schedules.
+The app was designed for hebrew language.
 
 ## Features:
 -Add and manage workers include:
@@ -22,14 +23,6 @@ load the code in inteliji or diffrente IDE for Java and run Main.app
 -Java 17+
 -JavaFX 24
 -Json
-
-## Project Structure:
-src/
-├── app/                   # Main launcher class
-├── controller/            # JavaFX controllers for GUI
-├── model/                 # Core logic: Worker, Shift, Schedule, Request, etc.
-├── resources/             # FXML + CSS
-├── data/                  # JSON files: workers.json, requests.json
 
 ## License
 MIT License - free to use and modify
