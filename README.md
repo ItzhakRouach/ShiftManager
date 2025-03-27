@@ -16,6 +16,28 @@ The app was designed for hebrew language.
 - View the week Schedule
 - By Using JavaFX create an Modern GUI.
 
+
+## Screenshots:
+
+![Main Dashboard](/main.jpg)
+
+
+
+
+![Add Worker](/addWorker.jpg)
+
+
+
+![Add Request](/addRequest.jpg)
+
+
+![Schdule generate](/schedule.jpg)
+
+
+
+
+
+
 ## How To Run:
 load the code in inteliji or diffrente IDE for Java and run Main.app
 
