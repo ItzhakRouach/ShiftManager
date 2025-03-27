@@ -24,14 +24,14 @@ The app was designed for hebrew language.
 
 
 
-![Add Worker](/addWorker.jpg)
+![Add Worker]([/addWorker.jpg](https://github.com/ItzhakRouach/ShiftManager/blob/main/addWorker.png?raw=true))
 
 
 
-![Add Request](/addRequest.jpg)
+![Add Request](https://github.com/ItzhakRouach/ShiftManager/blob/main/addRequest.png?raw=true)
 
 
-![Schdule generate](/schedule.jpg)
+![Schdule generate](https://github.com/ItzhakRouach/ShiftManager/blob/main/schedule.png?raw=true)
 
 
 
