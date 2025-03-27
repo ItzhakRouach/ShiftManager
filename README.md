@@ -24,7 +24,7 @@ The app was designed for hebrew language.
 
 
 
-![Add Worker]([/addWorker.jpg](https://github.com/ItzhakRouach/ShiftManager/blob/main/addWorker.png?raw=true))
+![Add Worker](https://github.com/ItzhakRouach/ShiftManager/blob/main/addWorker.png?raw=true))
 
 
 
