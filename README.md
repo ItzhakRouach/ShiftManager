@@ -19,7 +19,7 @@ The app was designed for hebrew language.
 
 ## Screenshots:
 
-![Main Dashboard](/main.jpg)
+![Main Dashboard](https://github.com/ItzhakRouach/ShiftManager/blob/main/main.png?raw=true)
 
 
 
