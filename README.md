@@ -41,7 +41,16 @@ load the code in inteliji or diffrente IDE for Java and run Main.app
 - Json
 
 ## License
-MIT License - free to use and modify
+Copyright (c) 2025 Itzhak Rouach
+
+This software is licensed, not sold. By using this software, you agree to the following terms:
+
+1. You may use this software for personal or business purposes on a single device.
+2. Redistribution, resale, modification, decompilation, or reverse engineering is strictly prohibited.
+3. This software is provided "as is", without warranty of any kind, express or implied.
+4. The author retains full ownership and all rights to this software.
+
+Unauthorized use or distribution may result in legal action.
 
 ## Contact me:
 Feel free to reach out:
