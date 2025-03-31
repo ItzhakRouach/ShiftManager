@@ -8,13 +8,20 @@
     -fx-text-fill: #333;
 }
 
-.button {
-    -fx-font-size: 14px;
-    -fx-background-color: #4CAF50;
+.restBtn{
+    -fx-background-color:#bd1117;
+    -fx-font-size: 16px;
     -fx-text-fill: white;
-    -fx-background-radius: 5px;
-    -fx-padding: 8 16;
+    -fx-text-alignment:center;
+    -fx-font-weight:700;
+    -fx-padding:10px;
 }
+
+.restBtn:hover{
+    -fx-background-color:#940d12;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.3, 2, 5);
+}
+
 
 .table-cell {
     -fx-alignment: center;
@@ -24,4 +31,17 @@
     -fx-background-color: white;
     -fx-border-color: #90caf9;
     -fx-border-radius: 8px;
+}
+
+.editBtn{
+    -fx-font-size:16px;
+    -fx-font-weight: 700;
+    -fx-text-fill:white;
+    -fx-background-color: #1937cf;
+    -fx-padding: 10px;
+}
+
+.editBtn:hover{
+    -fx-background-color:#152da3;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0.3, 2, 5);
 }

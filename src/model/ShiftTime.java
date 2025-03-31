@@ -2,7 +2,7 @@ package model;
 
 public enum ShiftTime{
     MORNING("בוקר"),
-    AFTERNOON("צהורים"),
+    AFTERNOON("צהריים"),
     NIGHT("לילה");
 
     private final String displayName;

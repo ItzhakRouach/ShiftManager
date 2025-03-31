@@ -1,6 +1,6 @@
 /*
-    This class is for handle worker data as his name , role  and so on
-    also the request that the worker have
+    This class is for handle worker data as his name, role and so on
+    also the request that the worker has
     and the shifts that the worker will get.
  */
 
@@ -12,12 +12,13 @@ import java.util.List;
 public class Worker {
    private String name; //User Name
    private Role role; //User model.Role: ShiftManager/Dispatcher/Guard
-   private boolean ShomerShabat; // User Shomer shabat or not
+   private boolean ShomerShabat; // User Shower shabat or not
    private boolean highpriority; // User requests must be
-   private int minShifts; // Min shift user need to have
-   private int maxShifts; // Max shift user can  have
-   private List<Request> request; // Create List of model.Request type
+   private int minShifts; // Min shift Worker needs to have
+   private int maxShifts;// Max shift Worker can have
+   private List<Request> request; // Create List of a model.Request type
     private List<Shift> assignedShifts; // List of the shifts that worker got assign to
+
 
    public Worker(String name , Role role , boolean ShomerShabat , boolean highpriority , int minShifts , int maxShifts){
        this.name = name;
@@ -106,24 +107,6 @@ public class Worker {
         }
     }
 
-    // method to remove shift that we want to from the Worker.
-    public void removeAssignedShift(Shift shift) {
-        assignedShifts.remove(shift);
-    }
-
-    // Return all shifts the worker assign to
-    public List<Shift> getAssignedShifts() {
-        return assignedShifts;
-    }
-    // remove worker request
-    public void removeRequest(Request r) {
-        request.remove(r);
-    }
-
-    // clear all Worker requests
-    public void clearRequests() {
-        request.clear();
-    }
     @Override
     public String toString(){
        return name + " (" + role + ")";
@@ -137,6 +120,5 @@ public class Worker {
        this.minShifts = minShifts;
        this.maxShifts = maxShifts;
     }
-
 }
 

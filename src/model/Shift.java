@@ -5,15 +5,16 @@
 
 
 package model;
-import model.*;
 import java.util.EnumMap;
 import java.util.Map;
+import java.util.HashMap;
 
-//Each shift we have DAY , TIME(MORNING,EVENING,NIGHT) And workers that assign to it.
+//Each shift we have DAY, TIME (MORNING,EVENING,NIGHT) And workers that assign to it.
 public class Shift {
     private  Day day;
     private ShiftTime time;
     private Map<Role, Worker> assignedWorkers;
+    private Map<Role , String> lables;
 
 
 
@@ -27,6 +28,7 @@ public class Shift {
         this.day = day;
         this.time = time;
         this.assignedWorkers = new EnumMap<>(Role.class);
+        this.lables = new HashMap<>();
     }
 
     /*
@@ -37,13 +39,13 @@ public class Shift {
     else return false (meaning someone allready assign to it)
      */
     public boolean assignWorker(Role role , Worker worker){
-        if(!assignedWorkers.containsKey(role)){
-            assignedWorkers.put(role,worker);
-            return true;
+        Worker current = assignedWorkers.get(role);
+        if (current != null && current.equals(worker)) {
+            return false; // No change
         }
-        return false;
+        assignedWorkers.put(role, worker);
+        return true;
     }
-
     /*
     Return worker that assign to the given role
      */
@@ -92,5 +94,13 @@ public class Shift {
             assignedWorkers.put(role, null);
         }
     }
+
+    public void setLables(Role role ,String lable){
+        lables.put(role,lable);
+    }
+    public String getLable(Role role){
+        return lables.getOrDefault(role,"");
+    }
+
 
 }

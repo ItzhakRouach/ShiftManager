@@ -1,5 +1,7 @@
 package controller;
+import javafx.beans.Observable;
 import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -12,13 +14,17 @@ import java.util.List;
 public class ShiftRequestController {
 
     @FXML
-    public ComboBox<Worker> workerComboBox;
+    private TableColumn<Request, String> mustDayOffColumn;
     @FXML
-    public ComboBox<Day> dayComboBox;
+    private ComboBox<Worker> workerComboBox;
     @FXML
-    public ComboBox<ShiftTime> shiftComboBox;
+    private ComboBox<Day> dayComboBox;
     @FXML
-    public CheckBox isDayOffCheckBox;
+    private ComboBox<ShiftTime> shiftComboBox;
+    @FXML
+    private CheckBox isDayOffCheckBox;
+    @FXML
+    private CheckBox isTrainingDayCheckBox;
     @FXML
     private TableView<Request> requestTable;
     @FXML
@@ -29,6 +35,10 @@ public class ShiftRequestController {
     private TableColumn<Request, String> shiftColumn;
     @FXML
     private TableColumn<Request, String> dayOffColumn;
+    @FXML
+    private  TableColumn<Request, String> trainingDayColumn;
+    @FXML
+    private CheckBox mustDayOffCheckBox;
 
     @FXML
     public void handleSaveRequests() {
@@ -51,6 +61,22 @@ public class ShiftRequestController {
             }
         });
 
+        isTrainingDayCheckBox.selectedProperty().addListener((observableValue, oldVal, newVal) ->{
+            shiftComboBox.setDisable(newVal);
+            if (newVal){
+                shiftComboBox.setValue(null);
+            }
+        });
+
+        mustDayOffCheckBox.selectedProperty().addListener((observableValue, oldVal, newVal) ->{
+            shiftComboBox.setDisable(newVal);
+            if (newVal){
+                shiftComboBox.setValue(null);
+            }
+        });
+
+
+
 
         workerColumn.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getWorker().getName()));
         ;
@@ -64,7 +90,15 @@ public class ShiftRequestController {
 
         // אייקון של חופש במקום טקסט רגיל
         dayOffColumn.setCellValueFactory(cellData ->
-                new SimpleStringProperty(cellData.getValue().isDayOff() ? "✔️" : "➖"));
+                new SimpleStringProperty(cellData.getValue().isDayOff() ? "✔️" : ""));
+
+        trainingDayColumn.setCellValueFactory(cellData->
+                new SimpleStringProperty(cellData.getValue().isTrainingDay() ? "יום רענון" :""));
+
+        mustDayOffColumn.setCellValueFactory(cellData ->
+                new SimpleStringProperty(cellData.getValue().isMustDayOff() ? "חופש חובה" : ""));
+
+
 
         RequestManager.loadFromJson();
 
@@ -81,14 +115,24 @@ public class ShiftRequestController {
         Day selectedDay = dayComboBox.getValue();
         ShiftTime selectedShift = shiftComboBox.getValue();
         boolean isDayOff = isDayOffCheckBox.isSelected();
+        boolean isTrainingDay = isTrainingDayCheckBox.isSelected();
+        boolean mustDayOff = mustDayOffCheckBox.isSelected();
 
 
-        if (selectedWorker == null || selectedDay == null || (!isDayOff && selectedShift == null)) {
+        if (selectedWorker == null || selectedDay == null){
             showAlert("שגיאה", "אנא בחר עובד, יום ומשמרת לפני הוספת בקשה.");
             return;
         }
 
-        Request request = new Request(selectedWorker, selectedDay, selectedShift, isDayOff);
+        if (!isDayOff && !isTrainingDay && !mustDayOff && selectedShift == null){
+            showAlert("שגיאה", "אנא בחר יום ומשמרת לפני הוספת בקשה.");
+            return;
+        }
+
+
+
+
+        Request request = new Request(selectedWorker, selectedDay, selectedShift, isDayOff,isTrainingDay,mustDayOff);
         selectedWorker.addRequest(request);
         RequestManager.addRequest(selectedWorker.getName(), request);
         requestTable.getItems().add(request);
@@ -99,6 +143,8 @@ public class ShiftRequestController {
         dayComboBox.setValue(null);
         shiftComboBox.setValue(null);
         isDayOffCheckBox.setSelected(false);
+        isTrainingDayCheckBox.setSelected(false);
+        mustDayOffCheckBox.setSelected(false);
 
     }
 
@@ -124,6 +170,7 @@ public class ShiftRequestController {
         dayComboBox.setValue(selected.getDay());
         shiftComboBox.setValue(selected.getShift());
         isDayOffCheckBox.setSelected(selected.isDayOff());
+        mustDayOffCheckBox.setSelected(selected.isMustDayOff());
 
         // מסירים מהטבלה וה־Map כדי שנוכל להכניס גרסה חדשה מעודכנת אח"כ
         requestTable.getItems().remove(selected);

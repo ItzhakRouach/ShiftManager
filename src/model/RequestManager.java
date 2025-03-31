@@ -25,6 +25,20 @@ public class RequestManager {
         return requestsMap.getOrDefault(workerName, new ArrayList<>());
     }
 
+    public static Request getRequestFor(Worker worker, Day day, ShiftTime shift) {
+        List<Request> requests = requestsMap.get(worker.getName());
+        if (requests == null) return null;
+
+        for (Request r : requests) {
+            if (r.getDay() == day && r.getShift() == shift) {
+                return r;
+            }
+        }
+        return null;
+    }
+
+
+
 
     //RETURN A COPY of all requests .
     public static Map<String, List<Request>> getAllRequests() {
@@ -45,7 +59,9 @@ public class RequestManager {
                             entry.getKey(), // שם העובד
                             req.getDay(),
                             req.getShift(),
-                            req.isDayOff()
+                            req.isDayOff(),
+                            req.isTrainingDay(),
+                            req.isMustDayOff()
                     ));
                 }
                 toSave.put(entry.getKey(), liteList);
@@ -81,7 +97,7 @@ public class RequestManager {
                     Worker worker = WorkerManager.findWorkerByName(entry.getKey());
                     if (worker != null) {
                         for (RequestLite lite : entry.getValue()) {
-                            Request req = new Request(worker, lite.getDay(), lite.getShift(), lite.isDayOff());
+                            Request req = new Request(worker, lite.getDay(), lite.getShift(), lite.isDayOff() , lite.isTrainingDay() , lite.isMustDayOff());
                             requestList.add(req);
                             worker.addRequest(req); // אם יש לך את זה
                         }

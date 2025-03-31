@@ -30,6 +30,10 @@
         <ComboBox fx:id="shiftComboBox" promptText="בחר משמרת" />
 
         <CheckBox fx:id="isDayOffCheckBox" text="יום חופש" />
+
+        <CheckBox fx:id="isTrainingDayCheckBox" text="רענון" />
+
+        <CheckBox fx:id="mustDayOffCheckBox" text="יום חופש שחובה" />
     </HBox>
 
     <HBox spacing="10">
@@ -49,10 +53,12 @@
         <content>
             <TableView fx:id="requestTable" prefHeight="350" prefWidth="600">
                 <columns>
-                    <TableColumn fx:id="workerColumn" text="עובד" prefWidth="200"/>
-                    <TableColumn fx:id="dayColumn" text="יום" prefWidth="200"/>
-                    <TableColumn fx:id="shiftColumn" text="משמרת" prefWidth="200"/>
-                    <TableColumn fx:id="dayOffColumn" text="חופש" prefWidth="180"/>
+                    <TableColumn fx:id="workerColumn" text="עובד" prefWidth="150"/>
+                    <TableColumn fx:id="dayColumn" text="יום" prefWidth="140"/>
+                    <TableColumn fx:id="shiftColumn" text="משמרת" prefWidth="165"/>
+                    <TableColumn fx:id="dayOffColumn" text="חופש" prefWidth="140"/>
+                    <TableColumn fx:id="trainingDayColumn" text="רענון" prefWidth="160"/>
+                    <TableColumn fx:id="mustDayOffColumn" text="יום חופש שחובה" prefWidth="120"/>
                 </columns>
             </TableView>
         </content>

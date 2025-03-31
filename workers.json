@@ -1,0 +1,122 @@
+{
+  "נתיב": {
+    "name": "נתיב",
+    "role": "SHIFT_MANAGER",
+    "ShomerShabat": false,
+    "highpriority": false,
+    "minShifts": 2,
+    "maxShifts": 3,
+    "request": [],
+    "assignedShifts": []
+  },
+  "רון": {
+    "name": "רון",
+    "role": "DISPATCHER",
+    "ShomerShabat": false,
+    "highpriority": false,
+    "minShifts": 5,
+    "maxShifts": 6,
+    "request": [],
+    "assignedShifts": []
+  },
+  "מתן": {
+    "name": "מתן",
+    "role": "SHIFT_MANAGER",
+    "ShomerShabat": false,
+    "highpriority": false,
+    "minShifts": 4,
+    "maxShifts": 6,
+    "request": [],
+    "assignedShifts": []
+  },
+  "דוד": {
+    "name": "דוד",
+    "role": "SHIFT_MANAGER",
+    "ShomerShabat": false,
+    "highpriority": false,
+    "minShifts": 5,
+    "maxShifts": 6,
+    "request": [],
+    "assignedShifts": []
+  },
+  "ירין": {
+    "name": "ירין",
+    "role": "SHIFT_MANAGER",
+    "ShomerShabat": true,
+    "highpriority": false,
+    "minShifts": 2,
+    "maxShifts": 3,
+    "request": [],
+    "assignedShifts": []
+  },
+  "דניאל": {
+    "name": "דניאל",
+    "role": "SHIFT_MANAGER",
+    "ShomerShabat": true,
+    "highpriority": true,
+    "minShifts": 5,
+    "maxShifts": 6,
+    "request": [],
+    "assignedShifts": []
+  },
+  "עאדל": {
+    "name": "עאדל",
+    "role": "GUARD",
+    "ShomerShabat": false,
+    "highpriority": false,
+    "minShifts": 5,
+    "maxShifts": 6,
+    "request": [],
+    "assignedShifts": []
+  },
+  "אדווה": {
+    "name": "אדווה",
+    "role": "SHIFT_MANAGER",
+    "ShomerShabat": true,
+    "highpriority": true,
+    "minShifts": 5,
+    "maxShifts": 6,
+    "request": [],
+    "assignedShifts": []
+  },
+  "לירן": {
+    "name": "לירן",
+    "role": "DISPATCHER",
+    "ShomerShabat": true,
+    "highpriority": false,
+    "minShifts": 4,
+    "maxShifts": 5,
+    "request": [],
+    "assignedShifts": []
+  },
+  "שלו": {
+    "name": "שלו",
+    "role": "GUARD",
+    "ShomerShabat": false,
+    "highpriority": false,
+    "minShifts": 5,
+    "maxShifts": 6,
+    "request": [],
+    "assignedShifts": []
+  },
+  "ניר": {
+    "name": "ניר",
+    "role": "SHIFT_MANAGER",
+    "ShomerShabat": false,
+    "highpriority": false,
+    "minShifts": 5,
+    "maxShifts": 6,
+    "request": [],
+    "assignedShifts": []
+  },
+  "צחי": {
+    "name": "צחי",
+    "role": "SHIFT_MANAGER",
+    "ShomerShabat": false,
+    "highpriority": false,
+    "minShifts": 5,
+    "maxShifts": 6,
+    "request": [],
+    "assignedShifts": []
+  }
+}
