@@ -24,8 +24,7 @@ The app was designed for hebrew language.
 ![Main Dashboard](https://github.com/ItzhakRouach/ShiftManager/blob/main/Screenshot%202025-03-31%20at%2021.13.09.png?raw=true)
 ![Add Worker](https://github.com/ItzhakRouach/ShiftManager/blob/main/addWorker.png?raw=true))
 ![Add Request](https://github.com/ItzhakRouach/ShiftManager/blob/main/addRequest.png?raw=true)
-![Schdule generate](Screenshot 2025-03-31 at 21.13.09.png)
-![Summary Worker Shifts](Screenshot 2025-03-31 at 21.13.25.png)
+![Summary Worker Shifts](https://github.com/ItzhakRouach/ShiftManager/blob/main/Screenshot%202025-03-31%20at%2021.13.25.png?raw=true))
 
 
 
